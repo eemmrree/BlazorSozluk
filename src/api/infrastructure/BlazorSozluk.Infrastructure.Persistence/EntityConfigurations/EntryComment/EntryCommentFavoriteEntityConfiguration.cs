@@ -23,7 +23,8 @@ namespace BlazorSozluk.Infrastructure.Persistence.EntityConfigurations.EntryComm
 
             builder.HasOne(x => x.CreatedUser)
                 .WithMany(x => x.EntryCommentFavorites)
-                .HasForeignKey(x => x.CreatedById);
+                .HasForeignKey(x => x.CreatedById)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

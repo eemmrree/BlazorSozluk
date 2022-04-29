@@ -10,7 +10,8 @@ namespace BlazorSozluk.Infrastructure.Persistence.EntityConfigurations
         public override void Configure(EntityTypeBuilder<User> builder)
         {
             base.Configure(builder);
-            builder.ToTable("user" , BlazorSozlukContext.DEFAULT_SCHEMA)
+            builder.ToTable("user", BlazorSozlukContext.DEFAULT_SCHEMA);
+
         }
     }
 }
